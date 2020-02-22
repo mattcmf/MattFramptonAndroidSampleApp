@@ -1,22 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="card"
             type="com.matcmf.mattframpton_sampleapp.data.Card" />
     </data>
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="150dp"
+        tools:layout_height="160dp"
+        app:cardCornerRadius="24dp"
+        android:elevation="20dp"
+        android:layout_margin="16dp"
+        >
 
-        <TextView
-            android:id="@+id/cardName"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{card.name}" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_margin="8dp"
+                android:id="@+id/cardImage"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:imageUrl="@{card.imageURl}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cardName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cardName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{card.name}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.19"
+                tools:text="cardName" />
+
+            <TextView
+                android:id="@+id/cardHp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{card.hp}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/cardName"
+                app:layout_constraintTop_toBottomOf="@id/cardName"
+                tools:text="100hp" />
+
+            <TextView
+                android:id="@+id/cardAttacks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text='@{card.attacks[0].name ?? ""}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/cardHp"
+                app:layout_constraintTop_toBottomOf="@id/cardHp"
+                tools:text="Fireblast: 100" />
+
+            <TextView
+                android:id="@+id/cardRarity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{card.rarity}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/cardAttacks"
+                app:layout_constraintTop_toBottomOf="@id/cardAttacks"
+                tools:text="Rare" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

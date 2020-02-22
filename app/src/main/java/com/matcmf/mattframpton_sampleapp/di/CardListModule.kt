@@ -11,8 +11,6 @@ val cardListModule = module {
         scoped{
             CardListRepository(get())
         }
-    }
-    scope(named<CardListActivity>()) {
         scoped{
             CardListViewModelFactory(get())
         }

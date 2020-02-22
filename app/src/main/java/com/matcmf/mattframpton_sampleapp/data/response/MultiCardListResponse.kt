@@ -8,6 +8,6 @@ data class MultiCardListResponse(
 
 fun MultiCardListResponse.toCardList(): List<Card>? {
     return this.cards.map{
-        Card(it.name, it.name)
+        Card(it.name, it.name, it.imageUrl, "${it.hp} hp", it.attacks ?: listOf(Attack()), it.rarity)
     }
 }

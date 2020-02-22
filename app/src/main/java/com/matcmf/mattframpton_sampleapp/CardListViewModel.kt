@@ -6,8 +6,12 @@ import androidx.lifecycle.ViewModelStoreOwner
 import com.matcmf.mattframpton_sampleapp.data.CardListRepository
 
 class CardListViewModel(private val cardListRepository: CardListRepository) : ViewModel() {
+
+    val cardList = cardListRepository.data
+
     fun loadCards() {
         cardListRepository.getCards()
+        cardListRepository.getCardCollection()
     }
 }
 

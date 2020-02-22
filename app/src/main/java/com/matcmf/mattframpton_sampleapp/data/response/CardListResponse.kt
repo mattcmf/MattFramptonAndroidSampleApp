@@ -3,7 +3,7 @@ package com.matcmf.mattframpton_sampleapp.data.response
 data class CardListResponse(
     val ability: Ability,
     val artist: String,
-    val attacks: List<Attack>,
+    val attacks: List<Attack>?,
     val convertedRetreatCost: Int,
     val evolvesFrom: String,
     val hp: String,

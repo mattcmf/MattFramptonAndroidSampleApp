@@ -1,6 +1,6 @@
-package com.matcmf.mattframpton_sampleapp.data
+package com.mattcmf.cardcatalogue.data
 
-import com.matcmf.mattframpton_sampleapp.data.response.Attack
+import com.mattcmf.cardcatalogue.data.response.Attack
 
 data class Card(
     val id: String,

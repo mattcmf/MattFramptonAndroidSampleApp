@@ -1,12 +1,12 @@
-package com.matcmf.mattframpton_sampleapp
+package com.mattcmf.cardcatalogue
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.matcmf.mattframpton_sampleapp.data.Card
-import com.matcmf.mattframpton_sampleapp.databinding.ItemCardHolderBinding
+import com.mattcmf.cardcatalogue.data.Card
+import com.mattcmf.cardcatalogue.databinding.ItemCardHolderBinding
 
 class CardListAdapter : RecyclerView.Adapter<CardListAdapter.CardHolder>() {
 

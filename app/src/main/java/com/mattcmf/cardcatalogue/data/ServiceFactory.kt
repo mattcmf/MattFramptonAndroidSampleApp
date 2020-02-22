@@ -1,4 +1,4 @@
-package com.matcmf.mattframpton_sampleapp.data
+package com.mattcmf.cardcatalogue.data
 
 import retrofit2.Retrofit
 

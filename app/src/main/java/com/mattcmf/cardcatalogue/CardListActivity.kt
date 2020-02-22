@@ -1,4 +1,4 @@
-package com.matcmf.mattframpton_sampleapp
+package com.mattcmf.cardcatalogue
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

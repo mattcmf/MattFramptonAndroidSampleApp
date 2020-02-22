@@ -1,9 +1,9 @@
-package com.matcmf.mattframpton_sampleapp
+package com.mattcmf.cardcatalogue
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
-import com.matcmf.mattframpton_sampleapp.data.CardListRepository
+import com.mattcmf.cardcatalogue.data.CardListRepository
 
 class CardListViewModel(private val cardListRepository: CardListRepository) : ViewModel() {
 

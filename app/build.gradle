@@ -10,7 +10,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.matcmf.mattframpton_sampleapp"
+        applicationId "com.matcmf.cardcatalogue"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -55,6 +55,9 @@ dependencies {
     // Testing
     testImplementation 'junit:junit:4.12'
     testImplementation "org.koin:koin-test:2.0.1"
+
+    //Mocking
+    testImplementation("io.mockk:mockk:1.9.3")
 
     //On Device Testing
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'

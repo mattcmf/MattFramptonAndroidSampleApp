@@ -1,9 +1,9 @@
-package com.matcmf.mattframpton_sampleapp.data
+package com.mattcmf.cardcatalogue.data
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.matcmf.mattframpton_sampleapp.data.response.toCardList
+import com.mattcmf.cardcatalogue.data.response.toCardList
 import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 

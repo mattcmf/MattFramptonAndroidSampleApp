@@ -1,8 +1,8 @@
-package com.matcmf.mattframpton_sampleapp.di
+package com.mattcmf.cardcatalogue.di
 
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
-import com.matcmf.mattframpton_sampleapp.data.ServiceFactory
+import com.mattcmf.cardcatalogue.data.ServiceFactory
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit

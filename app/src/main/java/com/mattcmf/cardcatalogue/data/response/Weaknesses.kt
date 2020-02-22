@@ -1,4 +1,4 @@
-package com.matcmf.mattframpton_sampleapp.data.response
+package com.mattcmf.cardcatalogue.data.response
 
 data class Weaknesses(
     val type: String,

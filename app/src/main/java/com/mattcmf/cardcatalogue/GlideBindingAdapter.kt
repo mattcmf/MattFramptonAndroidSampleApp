@@ -1,4 +1,4 @@
-package com.matcmf.mattframpton_sampleapp
+package com.mattcmf.cardcatalogue
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

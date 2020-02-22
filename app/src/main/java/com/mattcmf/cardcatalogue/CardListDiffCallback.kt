@@ -1,7 +1,7 @@
-package com.matcmf.mattframpton_sampleapp
+package com.mattcmf.cardcatalogue
 
 import androidx.recyclerview.widget.DiffUtil
-import com.matcmf.mattframpton_sampleapp.data.Card
+import com.mattcmf.cardcatalogue.data.Card
 
 class CardListDiffCallback(private val oldList: List<Card>, private val newList: List<Card>) : DiffUtil.Callback() {
 

@@ -1,7 +1,7 @@
-package com.matcmf.mattframpton_sampleapp.data
+package com.mattcmf.cardcatalogue.data
 
-import com.matcmf.mattframpton_sampleapp.data.response.CardListResponse
-import com.matcmf.mattframpton_sampleapp.data.response.MultiCardListResponse
+import com.mattcmf.cardcatalogue.data.response.CardListResponse
+import com.mattcmf.cardcatalogue.data.response.MultiCardListResponse
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -1,8 +1,8 @@
-package com.matcmf.mattframpton_sampleapp.di
+package com.mattcmf.cardcatalogue.di
 
-import com.matcmf.mattframpton_sampleapp.CardListActivity
-import com.matcmf.mattframpton_sampleapp.CardListViewModelFactory
-import com.matcmf.mattframpton_sampleapp.data.CardListRepository
+import com.mattcmf.cardcatalogue.CardListActivity
+import com.mattcmf.cardcatalogue.CardListViewModelFactory
+import com.mattcmf.cardcatalogue.data.CardListRepository
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 

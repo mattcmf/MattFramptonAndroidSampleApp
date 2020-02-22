@@ -1,10 +1,10 @@
-package com.matcmf.mattframpton_sampleapp
+package com.mattcmf.cardcatalogue
 
 
 import android.annotation.SuppressLint
 import android.app.Application
-import com.matcmf.mattframpton_sampleapp.di.cardListModule
-import com.matcmf.mattframpton_sampleapp.di.networkModule
+import com.mattcmf.cardcatalogue.di.cardListModule
+import com.mattcmf.cardcatalogue.di.networkModule
 import org.koin.android.ext.koin.androidContext
 
 import org.koin.core.context.startKoin

@@ -18,6 +18,12 @@ class LoadCardListUiTest {
 
     private val robot = CardListRobot()
 
+
+    /**
+     * Test can be extended by using network mocking library or mocking out the network repo
+     * to remove network dependency and use consistent data.
+     * https://github.com/andrzejchm/RESTMock
+     */
     @Test
     fun loadCardListUiTest() {
         robot.verifyCardDisplayed(CardListRobot.testCard(

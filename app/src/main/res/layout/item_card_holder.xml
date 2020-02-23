@@ -8,7 +8,7 @@
 
         <variable
             name="card"
-            type="com.matcmf.mattframpton_sampleapp.data.Card" />
+            type="com.mattcmf.cardcatalogue.data.Card" />
     </data>
 
     <androidx.cardview.widget.CardView

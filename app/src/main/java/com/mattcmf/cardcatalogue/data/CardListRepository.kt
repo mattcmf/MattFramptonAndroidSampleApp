@@ -8,6 +8,7 @@ import kotlinx.coroutines.withContext
 class CardListRepository(private val tradingCardAPIService: TradingCardAPIService) :
     ICardListRepository {
 
+    //TODO: Add error handling and tests for scenarios.
     override suspend fun getCards(playerOneId: String, playerTwoId: String): List<Card>? {
         return withContext(Dispatchers.IO) {
             val cardData = async { tradingCardAPIService.requestCard(playerOneId) }

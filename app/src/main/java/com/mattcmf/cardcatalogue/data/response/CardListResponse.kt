@@ -6,7 +6,7 @@ data class CardListResponse(
     val attacks: List<Attack>,
     val convertedRetreatCost: Int,
     val evolvesFrom: String,
-    val hp: String,
+    val hp: String?,
     val id: String,
     val imageUrl: String,
     val imageUrlHiRes: String,

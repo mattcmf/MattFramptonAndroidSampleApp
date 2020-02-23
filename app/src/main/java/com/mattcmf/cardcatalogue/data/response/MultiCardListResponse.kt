@@ -18,7 +18,7 @@ fun List<CardListResponse>.toCardList(): List<Card>? {
             it.id,
             it.name,
             it.imageUrl,
-            it.hp,
+            it.hp!!,
             it.attacks,
             it.rarity
         )

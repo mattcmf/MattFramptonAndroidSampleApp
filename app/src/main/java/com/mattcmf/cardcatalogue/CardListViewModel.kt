@@ -32,6 +32,7 @@ class CardListViewModel(private val cardListRepository: ICardListRepository) : V
     }
 }
 
+@Suppress("UNCHECKED_CAST")
 class CardListViewModelFactory(private val cardListRepository: CardListRepository) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

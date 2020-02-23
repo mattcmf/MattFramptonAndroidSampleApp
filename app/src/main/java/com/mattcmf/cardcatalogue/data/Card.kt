@@ -9,4 +9,15 @@ data class Card(
     val hp: String,
     val attacks: List<Attack>,
     val rarity: String
-)
+) {
+    companion object {
+        fun empty(): Card = Card(
+            id = "",
+            name = "",
+            imageURl = "",
+            hp = "",
+            attacks = emptyList(),
+            rarity = ""
+        )
+    }
+}

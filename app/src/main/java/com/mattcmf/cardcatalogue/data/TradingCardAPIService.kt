@@ -13,8 +13,8 @@ interface TradingCardAPIService {
     https://pokemontcg.io/cards?setCode=swsh1
     */
     @GET("cards/")
-    fun getCardsForSet(@Query("setCode") code: String): Deferred<MultiCardListResponse>
+    suspend fun getCardsForSet(@Query("setCode") code: String): MultiCardListResponse
 
     @GET("cards/{id}")
-    fun requestCard(@Path("id") id: String): Deferred<CardListResponse>
+    fun requestCard(@Path("id") id: String): CardListResponse
 }

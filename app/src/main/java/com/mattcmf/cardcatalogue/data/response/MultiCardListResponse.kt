@@ -7,7 +7,20 @@ data class MultiCardListResponse(
 )
 
 fun MultiCardListResponse.toCardList(): List<Card>? {
-    return this.cards.map{
-        Card(it.name, it.name, it.imageUrl, "${it.hp} hp", it.attacks ?: listOf(Attack()), it.rarity)
+    return this.cards.toCardList()
+}
+
+fun List<CardListResponse>.toCardList(): List<Card>? {
+    return this
+        .filter { it.hp != null }
+        .map {
+        Card(
+            it.id,
+            it.name,
+            it.imageUrl,
+            it.hp,
+            it.attacks,
+            it.rarity
+        )
     }
 }

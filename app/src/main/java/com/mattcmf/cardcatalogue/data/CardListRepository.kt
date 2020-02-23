@@ -1,38 +1,25 @@
 package com.mattcmf.cardcatalogue.data
 
-import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.mattcmf.cardcatalogue.data.response.toCardList
-import kotlinx.coroutines.*
-import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.withContext
 
-class CardListRepository(private val tradingCardAPIService: TradingCardAPIService) {
+class CardListRepository(private val tradingCardAPIService: TradingCardAPIService) :
+    ICardListRepository {
 
-    private var _currentCardList = MutableLiveData<List<Card>>()
-    val data: LiveData<List<Card>>
-        get() = _currentCardList
-
-    fun getCards() {
-        runBlocking {
-            launch(IO) {
-                val cardData = async { tradingCardAPIService.requestCard("swsh1-30") }
-                val cardData2 = async { tradingCardAPIService.requestCard("swsh1-30") }
-                Log.d("test_debug", "${cardData.await()} ${cardData2.await()}")
-            }
+    override suspend fun getCards(playerOneId: String, playerTwoId: String): List<Card>? {
+        return withContext(Dispatchers.IO) {
+            val cardData = async { tradingCardAPIService.requestCard(playerOneId) }
+            val cardData2 = async { tradingCardAPIService.requestCard(playerTwoId) }
+            listOf(cardData.await(), cardData2.await()).toCardList()
         }
     }
 
-    fun getCardCollection() {
-        runBlocking {
-            withContext(IO) {
-                val setData = tradingCardAPIService.getCardsForSet("swsh1")
-                val response = setData.await().toCardList()
-                _currentCardList.postValue(response)
-                Log.d("test_debug", response.toString())
-            }
+    override suspend fun getCardCollection(): List<Card>? {
+        return withContext(Dispatchers.IO) {
+            val setData = tradingCardAPIService.getCardsForSet("swsh1")
+            setData.toCardList()
         }
     }
 }
-
-

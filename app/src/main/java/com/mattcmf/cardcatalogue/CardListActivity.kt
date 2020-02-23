@@ -16,12 +16,12 @@ class CardListActivity : AppCompatActivity() {
         val viewModel = CardListViewModelProvider.get(this, cardListViewModelFactory)
         val cardListAdapter = CardListAdapter()
             .apply {
-                viewModel.cardList.observe(this@CardListActivity, Observer { cardList ->
+                viewModel.data.observe(this@CardListActivity, Observer { cardList ->
                     cards = cardList
                 })
             }
         cardListRecycleView.adapter = cardListAdapter
 
-        viewModel.loadCards()
+        viewModel.loadAllCards()
     }
 }

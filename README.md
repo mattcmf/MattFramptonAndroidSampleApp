@@ -5,6 +5,8 @@ This is the sample application covering various Android Architecture Components.
 
 Basic trading card app written in Kotlin, which allows users to preview a list of cards and some of their associated data, within a linear recyclerview.
 
+![](https://github.com/mattcmf/MattFramptonAndroidSampleApp/blob/master/Screenshot_1582536032.png?raw=true)
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -7,6 +7,11 @@ Basic trading card app written in Kotlin, which allows users to preview a list o
 
 ![](https://github.com/mattcmf/MattFramptonAndroidSampleApp/blob/master/Screenshot_1582536032.png?raw=true)
 
+## Todo List
+* Error handling for network calls
+* Network Mocking for Espresso Tests
+* Firebase Device Testing
+* CircleCI Pipeline
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
